@@ -1,3 +1,4 @@
 plotly
 matplotlib
 numpy
+scipy
