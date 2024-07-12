@@ -1,6 +1,3 @@
 plotly
 matplotlib
 numpy
-pandas
-scipy
-seaborn
