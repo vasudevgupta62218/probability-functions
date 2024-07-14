@@ -13,5 +13,5 @@ class Multiapp:
         })
 
     def run(self):
-        app=st.sidebar.selectbox("Select Distribution",self.apps,format_func=lambda app:app["title"])
+        app=st.sidebar.selectbox("#### Select Distribution",self.apps,format_func=lambda app:app["title"])
         app['function']()
