@@ -40,7 +40,7 @@ def app():
         st.write("Min: ",np.min(changed))
 
 
-    st.subheader("Change in Parameter:")
+    st.subheader("Change in Parameter(λ):")
     st.text("-> When λ is small, the distribution is skewed right (positively skewed), meaning\nit has a longer tail on the right side.\nAs λ increases, the distribution becomes more symmetric and bell-shaped.")
     st.text("-> For smaller λ values,the probabilities of observing larger numbers of events\ndecrease rapidly.\nFor larger λ values,the probabilities of observing larger numbers of events\ndecrease less rapidly.")
     st.text("-> As λ approaches infinity, the Poisson distribution approaches normal distribution\nwith mean λ and variance λ.\nThis is a consequence of the central limit theorem.")
