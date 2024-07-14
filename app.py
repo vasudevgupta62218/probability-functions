@@ -1,5 +1,5 @@
 from multiapp import Multiapp
-from apps import Poisson_dist,Normal_dist
+from PDF import Poisson_dist,Normal_dist
 
 app=Multiapp()
 app.add_app("Poisson Distribution",Poisson_dist)
