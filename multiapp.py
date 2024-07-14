@@ -3,7 +3,7 @@ import streamlit as st
 class Multiapp:
 
     def __init__(self):
-        st.set_page_config(page_title="Visualization",page_icon="logo.png",layout='wide',initial_sidebar_state='auto')
+        st.set_page_config(page_title="Vizualization",page_icon="logo.png",layout='wide',initial_sidebar_state='auto')
         self.apps=[]
 
     def add_app(self,title,func):
