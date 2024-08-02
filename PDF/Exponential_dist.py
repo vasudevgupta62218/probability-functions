@@ -43,5 +43,5 @@ def app():
 
     st.subheader("Change in Parameter(λ):")
     st.text(" Consider λ as waiting time ")
-    st.text("=> As λ increases, the average waiting time also increases,then there will be the\nless probability for the lower average time. And the curve will be\nflatter due to this.")
+    st.text("=> As λ increases, the average waiting time also increases,then there will be the\n chances for the higher average time also. And the curve will be\nflatter and more stretched due to this.")
     st.text("=> When λ is small, the PDF is relatively steep, indicating that values of x\nfarther from zero are less probable.Decreasing λ makes\nthe PDF steeper and more concentrated near 0.")
