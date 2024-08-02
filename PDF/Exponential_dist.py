@@ -11,9 +11,9 @@ def app():
 
     np.random.seed(40)
 
-    original=expon.rvs(scale=5,size=1000)
+    original=expon.rvs(scale=1/5,size=1000)
     input_lambda=st.sidebar.slider("Parameter",1,20,value=10)
-    changed=expon.rvs(scale=input_lambda,size=1000)
+    changed=expon.rvs(scale=1/input_lambda,size=1000)
 
     hist=st.sidebar.checkbox("Histogram",value=False)
     curve=st.sidebar.checkbox("PDF Curve",value=True)
@@ -28,20 +28,19 @@ def app():
     with col1:
             st.subheader("Descriptive Statistics for Original Data")
             st.write("Parameter: ",5)
-            st.write("Mean: ",1/5)
-            st.write("Standard Deviation: ",1/5)
+            st.write("Mean: ",np.mean(original))
+            st.write("Standard Deviation: ",np.std(original))
             st.write("Max: ",np.max(original))
             st.write("Min: ",np.min(original))
 
     with col2:
             st.subheader("Descriptive Statistics for Changed Data")
             st.write("Parameter: ",input_lambda)
-            st.write("Mean: ",1/input_lambda)
-            st.write("Standard Deviation: ",1/input_lambda)
+            st.write("Mean: ",np.mean(changed))
+            st.write("Standard Deviation: ",np.std(changed))
             st.write("Max: ",np.max(changed))
             st.write("Min: ",np.min(changed))
 
     st.subheader("Change in Parameter(λ):")
-    st.text(" Consider λ as waiting time ")
-    st.text("=> As λ increases, the average waiting time also increases,then there will be the\n chances for the higher average time also. And the curve will be\nflatter and more stretched due to this.")
-    st.text("=> When λ is small, the PDF is relatively steep, indicating that values of x\nfarther from zero are less probable.Decreasing λ makes\nthe PDF steeper and more concentrated near 0.")
+    st.text("=> When λ is large, the mean(1/λ) decreases, indicating that the expected\nwaiting time between events is shorter and which implies events occur more\nfrequently,the exponential distribution becomes more peaked and concentrated around zero.\nAs λ increases, the variance decreases, meaning that the\ndistribution becomes more concentrated around the mean.")
+    st.text("=> When λ is small, the distribution is more spread out. This implies that\nevents occur less frequently, and the waiting times between events are\nlonger. ")
